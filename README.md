@@ -2,7 +2,7 @@
 
 A local, runnable AI Ops Assistant that accepts natural language tasks, plans execution steps, calls real third-party APIs (GitHub, OpenWeather, NewsAPI), and verifies the results.
 
-## 🧠 Architecture
+##  Architecture
 
 The system uses a **Multi-Agent Architecture**:
 
@@ -10,13 +10,13 @@ The system uses a **Multi-Agent Architecture**:
 2.  **Executor Agent**: Iterates through the plan, executing each tool call strictly. It handles real API interactions and captures raw outputs.
 3.  **Verifier Agent**: Analyzes the execution results against the original user query. It synthesizes a final natural language response and flags any missing or incomplete data.
 
-## 🔌 Integrated APIs
+##  Integrated APIs
 
 -   **GitHub API**: Search and retrieve repository details.
 -   **OpenWeather API**: Get current weather data for any city.
 -   **NewsAPI**: Retrieve top headlines (Technology, etc.).
 
-## 🚀 Setup Instructions
+##  Setup Instructions
 
 1.  **Clone/Open the Repository**
 2.  **Create Virtual Environment (Optional but recommended)**
@@ -46,7 +46,7 @@ The system uses a **Multi-Agent Architecture**:
     streamlit run ai_ops_assistant/main.py
     ```
 
-## 🧪 Example Prompts
+##  Example Prompts
 
 1.  **GitHub Research**
     > "Find the top 3 Python GitHub repos created this year and show their star counts."
@@ -57,7 +57,7 @@ The system uses a **Multi-Agent Architecture**:
 3.  **Comparison & Trending**
     > "Compare weather in Mumbai and Bangalore and list trending GitHub repos."
 
-## ⚠️ Limitations & Tradeoffs
+##  Limitations & Tradeoffs
 
 -   **Sequential Execution**: The Executor runs steps one by one. Parallel execution could improve performance for independent tasks.
 -   **Error Handling**: Basic retry logic is implemented via the Verifier's ability to report issues, but complex auto-recovery loops are simplified for this scope.
